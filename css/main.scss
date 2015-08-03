@@ -3,50 +3,38 @@
 ---
 @charset "utf-8";
 
-
-
-// Our variables
-$base-font-family: Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
-
-$spacing-unit:     30px;
-
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
-
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
-
-// Width of the content area
-$content-width:    800px;
-
-$on-palm:          600px;
-$on-laptop:        800px;
-
-
-
-// Using media queries with like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
+body {
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 70px;
 }
 
+.as-nav {
+	border-bottom: 1px solid #3E606F;
 
+	.navbar-brand {
+		font-weight: 700;
+		color: #193441;
+	}	
+}
 
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import
-        "base",
-        "layout",
-        "syntax-highlighting"
-;
+.as-footer {
+	padding-top: 10px;
+	padding-bottom: 20px;
+	color: #3E606F;
+	text-align: center;
+	border-top: 1px solid #3E606F;
+}
+
+.as-footer-links {
+	padding-left: 0;
+	margin-top: 20px;
+
+	li:first-child {
+		padding-left: 0;
+	}
+
+	li {
+		display: inline;
+		padding: 0 2px;
+	}
+}
