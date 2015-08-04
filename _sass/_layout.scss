@@ -3,7 +3,16 @@ html, body {
 }
 
 .as-nav {
-	border-bottom: 1px solid #3E606F;
+	.navbar-header {
+		float: left;
+		padding: 15px;
+		text-align: center;
+		width: 100%;
+
+		.navbar-brand {
+			float: none;
+		}
+	}
 }
 
 .as-content {
@@ -17,7 +26,6 @@ html, body {
 	padding-top: 10px;
 	padding-bottom: 20px;
 	text-align: center;
-	border-top: 1px solid #3E606F;
 	margin-bottom: 0;
 	height: 82px;
 }
