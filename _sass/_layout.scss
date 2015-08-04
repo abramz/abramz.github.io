@@ -1,9 +1,16 @@
-body {
-	padding-bottom: 70px;
+html, body {
+	height: 100%;
 }
 
 .as-nav {
 	border-bottom: 1px solid #3E606F;
+}
+
+.as-content {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -82px;
 }
 
 .as-footer {
@@ -11,6 +18,12 @@ body {
 	padding-bottom: 20px;
 	text-align: center;
 	border-top: 1px solid #3E606F;
+	margin-bottom: 0;
+	height: 82px;
+}
+
+.push {
+	height: 82px;
 }
 
 .as-footer-links {
