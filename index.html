@@ -1,10 +1,50 @@
 ---
 layout: default
 ---
-<h3>Current Open Source Projects</h3>
-<h4><a href="https://github.com/riot-api-challenge/api-challenge">Patch Diff - Riot API Challenge 2.0</a></h2>
-<p>For Riot's API Challenge 2.0, I am working with <a href="https://github.com/SmoshySmosh">Ethan Pursley</a> to develop a website that displays differences between League of Legends' patches 5.11 and 5.14. With the releases of patches 5.12, 5.13, and 5.14, a series of changes were made to the AP (ability power) items in the game. For the challenge, Riot made available 200,000 match identifiers each from before these changes (5.11) and after these changes (5.14). Using their API we have been able to retrieve detailed information about these matches, and aggregate statistics about champions. We will then present these in the website</p>
-<p>We are using node.js to crawl the Riot API for match information. We are storing the matches in MongoDB, and use MongoDB's aggregation framework to gather champion statistics. We store the champion statistics in Firebase so that we do not require an API ourselves. Our back end is an Nginx reverse proxy running in Docker containers on AWS. We reverse proxy requests to the static Riot API for champion details, to Riot's Data Dragon for assests such as images, and to S3 which is where we store our front end. Finally, our front-end is an AngularJS web application.</p>
-<br />
-<h4><a href="https://github.com/abramz/gulp-render-react">gulp-render-react</a></h2>
-<p>gulp-render-react is a plugin for the popular Node.js build system, <a href="http://gulpjs.com/">gulp.js</a>. I created this plugin so that I could use it in the 2015 <a href="http://www.staticshowdown.com/">Static Showdown</a>. I used the plugin so that I could pre-render <a href="https://facebook.github.io/react/">React</a> components in the build process. I wanted to do this to decrease initial load time of the static web application I created for the hackathon. After the Static Showdown was over, I forgot about gulp-render-react, until recently. The plugin is currently up to date and on <a href="https://www.npmjs.com/package/gulp-render-react">npm</a>, but there are a few things I have in mind to improve it and make it more useful for a wider audience.</p>
+<div class="container flow-text">
+	<h3 class="center-align">Portofolio</h3>
+	<hr />
+	<div class="row">
+		<div class="col s12 m12 l12">
+			<div class="row">
+				<h4><a class="deep-orange-text text-accent-2" href="https://github.com/abramz/short-url">Short Url
+					<span class="mega-octicon octicon-mark-github"></span></a></h4>
+				<p>Short Url is a simple URL shortener. It contains three components:</p>
+				<ul>
+					<li>
+						<p>The <b>Front End</b> is pretty simple, one HTML page and a few lines of JavaScript. It can be hooked up to <a href="https://travis-ci.org">travis-ci</a> and <a href="https://cloud.google.com/storage/">Google Cloud Storage</a>. This allows successful builds to be deployed to a bucket in Google Cloud Storage. I use <a href="http://gulpjs.com/">gulp</a> to run tasks, including unit tests. That means, that the code is tested on travis-ci before deployment.</p>
+					</li>
+					<li>
+						<p>The <b>API</b> is a <a href="https://nodejs.org">node.js</a> application that stores/retrieves long URLs in a MySQL database. I use <a href="http://expressjs.com/">express.js</a> to run an API that will:</p>
+						<ul>
+							<li>"shorten" a long URL that is POSTed to '/'</li>
+							<li>returns a long URL that is GETed to '/s'</li>
+						</ul>
+						<p>I use mocha to run unit tests, and have a Docker file so that the API can run in a container. The API can be hooked up to <a href="https://travis-ci.org">travis-ci</a> and <a href="https://cloud.google.com/container-engine/">Google Container Engine</a>. I can run tests with <a href="https://mochajs.org/">mocha</a>, so that code is tested before deployment. On a sucessful build of the master branch, an updated image, identified by the build id, is sent to the Google Container Registry. Then, a rolling update is run on a Google Container Cluster.</p>
+					</li>
+					<li>
+						<p>The <b>Proxy</b> is an <a href="http://wiki.nginx.org/Main">nginx</a> reverse proxy that:</p>
+							<ul>
+								<li>sends GET requests to '/', to the Google Cloud Storage bucket containing the front end</li>
+								<li>sends all other requests to the API running in a Google Container Cluster</li>
+							</ul>
+						<p>While there are no tests for the proxy, when a check-in is made to the master branch, a <a href="https://travis-ci.org">travis-ci</a> build does kick off, and if the <a href="https://www.docker.com/">Docker</a> image can be built, it has the same deployment scheme as the API.</p>
+					</li>
+				</ul>
+			</div>
+			<div class="row">
+				<h4><a class="deep-orange-text text-accent-2" href="http://ec2-54-69-200-250.us-west-2.compute.amazonaws.com/">Patch Diff - Riot API Challenge 2.0 (live)
+					<i class="material-icons small">launch</i></a></h4>
+					<p>For Riot's API Challenge 2.0, I worked with <a href="https://github.com/SmoshySmosh">Ethan Pursley</a> to develop a website that display differences between League of Legends patches 5.11 and 5.14. The release of patches 5.12, 5.13, and 5.14, brought a series of changes made to AP (ability power) items in the game. We received a data set of 400,000 match identifiers, and while the data set is not all inclusive, there are 200,000 games for each patch, we were able to display some interesting stats.</p>
+					<p>You can see the <a href="https://github.com/riot-api-challenge/api-challenge">source on GitHub
+					<span class="mega-octicon octicon-mark-github"></span></a></p>
+			</div>
+			<div class="row">
+				<h4><a class="deep-orange-text text-accent-2" href="https://github.com/abramz/gulp-render-react">gulp-render-react
+					<span class="mega-octicon octicon-mark-github"></span></a></h4>
+
+					<p>gulp-render-react is a plugin for the popular Node.js build system, <a href="http://gulpjs.com/">gulp.js</a>. I created this plugin so that I could pre-render <a href="https://facebook.github.io/react/">React</a> components in the build process. I wanted to do this to decrease initial load time of static web applications.</p>
+			</div>
+		</div>
+	</div>
+</div>
