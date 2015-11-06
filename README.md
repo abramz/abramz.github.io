@@ -1,2 +1,2 @@
 # abramz.github.io
-Jekyll source for my [website](andrewshapro.com)
+Jekyll source for my [website](http://andrewshapro.com)
