@@ -1,53 +1,40 @@
----
-layout: default
----
-<div class="container flow-text">
-	<br />
-	<div class="row">
-		<h4 class="center-align">About Me</h4>
-		<hr />
-		<div class="col s12 m12 l12">
-			<div class="row">
-				<p>I love to cook. Baking, grilling, roasting, sautéing, all of it. One reason that I love cooking is the combination of science (chemistry) and art. It is an outlet that I can use to flex my creative muscle while following a plan. I think there are a lot of similarities between software development and cooking. We have the science, standards, and best practices, but we also have the ability to be creative; we can riff off the standard way of doing things like we can riff off a recipe. This often leads to something new and not always expected; that novelty of experimentation is what I love most about both cooking and software development.</p>
-			</div>
-		</div>
-	</div>
-	<div class="row">
-		<h4 class="center-align">Portfolio</h4>
-		<hr />
-		<div class="col s12 m12 l12">
-			<div class="row">
-				<h4><a class="deep-orange-text text-accent-2" href="https://github.com/abramz/short-url">Short Url
-					<span class="mega-octicon octicon-mark-github"></span></a></h4>
-				<p>Short Url is a simple URL shortener. It contains three components:</p>
-				<ul>
-					<li>
-						<p>The <b>Front End</b> is pretty simple, one HTML page and a few lines of JavaScript. It can be hooked up to <a href="https://travis-ci.org">travis-ci</a> and <a href="https://cloud.google.com/storage/">Google Cloud Storage</a>. This allows successful builds to be deployed to a bucket in Google Cloud Storage. I use <a href="http://gulpjs.com/">gulp</a> to run tasks, including unit tests. That means, that the code is tested on travis-ci before deployment.</p>
-					</li>
-					<li>
-						<p>The <b>API</b> is a <a href="https://nodejs.org">node.js</a> application that stores/retrieves long URLs in a MySQL database. I use <a href="http://expressjs.com/">express.js</a> to run an API that will:</p>
-						<ul>
-							<li>"shorten" a long URL that is POSTed to '/'</li>
-							<li>returns a long URL that is GETed to '/s'</li>
-						</ul>
-						<p>I use mocha to run unit tests, and have a Docker file so that the API can run in a container. The API can be hooked up to <a href="https://travis-ci.org">travis-ci</a> and <a href="https://cloud.google.com/container-engine/">Google Container Engine</a>. I can run tests with <a href="https://mochajs.org/">mocha</a>, so that code is tested before deployment. On a sucessful build of the master branch, an updated image, identified by the build id, is sent to the Google Container Registry. Then, a rolling update is run on a Google Container Cluster.</p>
-					</li>
-					<li>
-						<p>The <b>Proxy</b> is an <a href="http://wiki.nginx.org/Main">nginx</a> reverse proxy that:</p>
-							<ul>
-								<li>sends GET requests to '/', to the Google Cloud Storage bucket containing the front end</li>
-								<li>sends all other requests to the API running in a Google Container Cluster</li>
-							</ul>
-						<p>While there are no tests for the proxy, when a check-in is made to the master branch, a <a href="https://travis-ci.org">travis-ci</a> build does kick off, and if the <a href="https://www.docker.com/">Docker</a> image can be built, it has the same deployment scheme as the API.</p>
-					</li>
-				</ul>
-			</div>
-			<div class="row">
-				<h4><a class="deep-orange-text text-accent-2" href="https://github.com/abramz/gulp-render-react">gulp-render-react
-					<span class="mega-octicon octicon-mark-github"></span></a></h4>
-
-					<p>gulp-render-react is a plugin for the popular Node.js build system, <a href="http://gulpjs.com/">gulp.js</a>. I created this plugin so that I could pre-render <a href="https://facebook.github.io/react/">React</a> components in the build process. I wanted to do this to decrease initial load time of static web applications.</p>
-			</div>
-		</div>
-	</div>
-</div>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Andrew Shapro</title>
+    <meta name="description" content="Andrew Shapro's personal website">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <style>
+      html {
+        font-family: 'Lato', sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <header>
+        <h1>Andrew Shapro - Softare Engineer</h1>
+      </header>
+      <main>
+      </main>
+      <footer>
+        <span><a href="https://github.com/abramz">GitHub</a></span>
+        <span><strong>·</strong></span>
+        <span><a href="http://abramz.bitbucket.org/">Bitbucket</a></span>
+        <span><strong>·</strong></span>
+        <span><a href="https://www.linkedin.com/pub/andrew-shapro/4b/a62/4b2">LinkedIn</a></span>
+      </footer>
+    </div>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-65962744-1', 'andrewshapro.com');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>
