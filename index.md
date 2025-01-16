@@ -17,7 +17,7 @@ Toy app to learn react-native & expo
 
 [Source](https://github.com/abramz/dog-or-cat) • [Demo](https://andrewshapro.com/dog-or-cat)
 
-## magic-lightspeed-next -2021
+## magic-lightspeed-next - 2021
 
 Streaming with [Project Lightspeed](https://github.com/GRVYDEV/Project-Lightspeed) behind magic link authentication
 
