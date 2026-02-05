@@ -7,15 +7,15 @@ layout: default
 
 ## Boids - 2024
 
-Toy experiments with [boid](https://www.red3d.com/cwr/boids/) simulations using [three.js](https://threejs.org/)
+Flocking simulation exploring emergent behavior using three.js. Implemented cohesion, separation, and alignment algorithms for autonomous agent movement in 3D space.
 
 [Source](https://github.com/abramz/boids) • [Demo](https://andrewshapro.com/boids)
 
 ## Dog or cat - 2024
 
-Toy app to learn react-native & expo
+Mobile app for learning React Native and Expo development.
 
-[Source](https://github.com/abramz/dog-or-cat) • [Demo](https://andrewshapro.com/dog-or-cat)
+[Source](https://github.com/abramz/dog-or-cat) • [Demo - requires unsplash API key](https://andrewshapro.com/dog-or-cat)
 
 ## magic-lightspeed-next - 2021
 
@@ -25,18 +25,18 @@ Streaming with [Project Lightspeed](https://github.com/GRVYDEV/Project-Lightspee
 
 ## URL Shortener - 2015
 
-A URL shortener deployed to GCP.
+URL shortener deployed to GCP.
 
 [Source](https://github.com/abramz/short-url)
 
 ## gulp-render-react - 2014
 
-A now ancient gulp plugin to render react at build time for use in static sites.
+Gulp plugin to render React at build time for static sites.
 
 [Source](https://github.com/abramz/gulp-render-react)
 
 ## Angular Hover Spy - 2013
 
-Directive for a now ancient version of angular to propogate hover events to support things like columnar highlights in tables.
+Angular directive to propagate hover events - supports things like columnar highlights in tables.
 
 [Source](https://github.com/abramz/angular-hover-spy) • [Demo](https://andrewshapro.com/angular-hover-spy-example/#/)
