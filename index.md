@@ -7,7 +7,7 @@ layout: default
 
 ## Boids - 2024
 
-Flocking simulation exploring emergent behavior using three.js. Implemented cohesion, separation, and alignment algorithms for autonomous agent movement in 3D space.
+Flocking simulation exploring emergent behavior using react-three-fiber.
 
 [Source](https://github.com/abramz/boids) • [Demo](https://andrewshapro.com/boids)
 
