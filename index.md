@@ -5,7 +5,7 @@
 layout: default
 ---
 
-## Boids - 2024
+## Boids - 2024-2026
 
 Flocking simulation exploring emergent behavior using react-three-fiber.
 
@@ -21,4 +21,9 @@ Flocking simulation exploring emergent behavior using react-three-fiber.
 Mobile app for learning React Native and Expo development.
 
 [Source](https://github.com/abramz/dog-or-cat) • [Demo - requires unsplash API key](https://andrewshapro.com/dog-or-cat)
+
+<video controls width="100%" max-width="600">
+    <source src="/assets/dog-or-cat.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
 
